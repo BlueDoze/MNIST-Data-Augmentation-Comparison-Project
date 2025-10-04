@@ -1,26 +1,26 @@
-MNIST Data Augmentation Comparison Project
-Project Overview
+# MNIST Data Augmentation Comparison Project
+# Project Overview
 This project demonstrates the impact of data augmentation on Convolutional Neural Network (CNN) performance using the MNIST handwritten digit dataset. Two identical CNN models were trained and evaluated - one with standard training data and another with augmented data - to analyze how data augmentation affects training dynamics, generalization capability, and final model performance.
 
 <!-- Project motivation and background -->
 The MNIST dataset serves as an excellent benchmark for understanding fundamental deep learning concepts. This project specifically investigates whether the additional computational cost of data augmentation translates to tangible improvements in model robustness and performance.
 
-Key Findings
-Performance Comparison
+# Key Findings
+# Performance Comparison
 Model without Augmentation: 99.26% test accuracy
 
 Model with Augmentation: 99.41% test accuracy
 
 Improvement: +0.15% accuracy with data augmentation
 
-Training Characteristics
+# Training Characteristics
 Training Time: Augmented model required 36 seconds longer (699s vs 663s)
 
 Convergence: Non-augmented model learned faster initially, but augmented model showed better generalization
 
 Overfitting: Non-augmented model showed larger gap between training and validation performance
 
-Model Robustness
+# Model Robustness
 The augmented model achieved lower test loss (0.0186 vs 0.0288)
 
 Better balanced precision and recall across all digit classes
@@ -30,8 +30,8 @@ More consistent performance with fewer misclassifications
 <!-- Why these findings matter -->
 These results demonstrate that data augmentation acts as an effective regularizer, forcing the model to learn more generalized features rather than memorizing specific training examples.
 
-Technical Implementation
-Dataset
+# Technical Implementation
+# Dataset
 MNIST handwritten digits (60,000 training, 10,000 test images)
 
 28x28 pixel grayscale images
@@ -45,7 +45,7 @@ Random zoom (±10%)
 
 Random translation (±10% in both directions)
 
-Model Architecture
+# Model Architecture
 python
 CNN with:
 - 2 Convolutional layers (32 and 64 filters)
@@ -65,7 +65,7 @@ Loss Function: Categorical Crossentropy
 <!-- Technical design choices explained -->
 The model architecture was carefully selected to balance learning capacity with computational efficiency, while the augmentation parameters were chosen to create realistic variations without distorting the semantic meaning of digits.
 
-Project Structure
+# Project Structure
 text
 mnist-augmentation-comparison/
 │
